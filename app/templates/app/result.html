@@ -1,0 +1,29 @@
+{% extends "app/base.html" %}
+{% block left-column%}
+{% csrf_token %}
+{% load static %}
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <ul style="list-style-type:circle">
+          <li>Document Name: {{doc_type}}</li>
+          <li>ID Number: {{id_num}}</li>
+          <li>First Name: {{first_name}}</li>
+          <li>Last Name: {{last_name}}</li>
+          <li>Verification: {{verifiation}}</li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <div class="container">
+          <img class="res" style="width: 250px; height: 200px" id="pic1" src="{% static 'app/selfie.png' %}" alt="pic">
+          <img class="res" style="width: 250px; height: 200px" src="{% static 'app/portrait_doc.png' %}" alt="pic">
+        </div>
+      </div>
+  </div>
+</div>
+
+
+  {%endblock%}
+
+

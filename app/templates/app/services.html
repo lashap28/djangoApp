@@ -1,0 +1,11 @@
+{% extends "app/base.html" %}
+{% block left-column%}
+  {% csrf_token %}
+    <div class="p-5 mb-4 bg-light rounded-3">
+      <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">KYC</h1>
+        <p class="col-md-8 fs-4">Client On-Boarding Service
+            <button class="btn btn-primary btn-lg" onclick="location.href='{% url 'get' %}'" type="button">try it!</button>
+      </div>
+    </div>
+{%endblock%}

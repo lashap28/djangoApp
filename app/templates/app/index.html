@@ -1,0 +1,12 @@
+{% extends "app/base.html" %}
+  {% block left-column%}
+  {% csrf_token %}
+  <div class="container">
+    <img class="img_pos" id="img_f" src="{% url 'video_stream' %}">
+  </div>
+  <div>
+    <button type="button" id="selfie_btn" class="btn btn-success btn-lg">Selfie</button>
+    <button disabled type="button" id="doc_btn" class="btn btn-success btn-lg">Doc Capture</button>
+    <button disabled type="button" id="next_btn" class="btn btn-success btn-lg" onclick="location.href='{% url 'calculate' %}'">Next</button>
+  </div>
+  {%endblock%}
